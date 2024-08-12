@@ -1,0 +1,17 @@
+.container{
+    padding: 20px;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    color: #FFFFE3;
+}
+
+.container > div {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* width: 1280px; */
+
+}
+

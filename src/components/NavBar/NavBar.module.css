@@ -1,0 +1,57 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    color: #FFFFE3;
+    border-bottom: 0.1px solid #ffffe332; 
+}
+
+.container > div :hover , .sidebaritems :hover{
+    color: #73D8F7;
+    transition: color 0.2s ease-in-out;
+}
+
+.container > div > a{
+    font-size: 14px;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.items{
+    border: 0.1px solid #ffffe332;
+    display: flex;
+    gap: 1rem;
+    padding: 10px 15px ;
+    border-radius: 100px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.items > a , .contact > a , .logo > a , .sidebaritems > a{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    transition: color 0.3s ease-in-out;
+}
+
+.logo , .contact , .logo{
+    border: 0.1px solid #ffffe332;
+    padding: 10px 20px;
+    border-radius: 100px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.contact > button{
+    border: none;
+    background-color: #0E100F;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 1000px){
+    .sidebar{
+        opacity: 1;
+    }
+    .contact , .items{
+        visibility: hidden;
+    }
+}
