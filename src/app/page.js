@@ -59,6 +59,8 @@ export default function App() {
     </main>
 
     {cursor &&  <Image src='/cursors/Better_Figma_Cursor_orange.svg' alt='cursor' height={70} width={60} style={{
+          transform:'translateY(-20px)',
+          // transform:'translateX(-5px)',
           position: 'fixed',
           left: mousePosition.x,
           top: mousePosition.y,
