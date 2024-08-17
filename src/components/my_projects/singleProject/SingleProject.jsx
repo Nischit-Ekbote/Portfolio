@@ -30,6 +30,13 @@ export default function Page({project , i}) {
                         </div>
                         <p className={style.metaData}>{project.year}</p>
                     </div>
+                    <ul>
+                        {
+                            project.desc.map((d,i) => (
+                                <li key={i}>{d}</li>
+                            ))
+                        }
+                    </ul>
                     {isExternalLink(project.link) ? (
                         <button><a href={project.link} target="_blank" rel="noopener noreferrer">Visit Website</a></button>
                     ) : (
@@ -46,6 +53,13 @@ export default function Page({project , i}) {
                         </div>
                         <p className={style.metaData}>{project.year}</p>
                     </div>
+                    <ul>
+                        {
+                            project.desc.map((d , i) => (
+                                <li key={i}>{d}</li>
+                            ))
+                        }
+                    </ul>
                     {isExternalLink(project.link) ? (
                         <button><a href={project.link} target="_blank" rel="noopener noreferrer">Visit Website</a></button>
                     ) : (

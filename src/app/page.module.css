@@ -40,20 +40,17 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: none;
 }
 
-.logoText2 > div > a > svg{
+.logoText2 > div > a > svg , .logoText1 > div > a > svg{
+  margin-right: 5px;
   background-color: transparent;
   color: #55E100;
   filter: drop-shadow(0px 0px 10px rgba(123, 255, 0, 0.5));
 }
 
-
-.logoText1 > div > a{
-  cursor: none;
-}
-
-.logoText1 > div , .logoText2 > div > a{
+.logoText1 > div > a , .logoText2 > div > a{
   height: 50px;
   padding: 0px 10px;
   border: 1px solid #ffffe332;
@@ -76,4 +73,18 @@
   letter-spacing: -3px;
 }
 
+
+@media screen and (max-width: 750px){
+  .logoText1 > h1 , .logoText2  >h1 , .logoText3 > span , .logoText3 > h1 {
+    font-size: clamp(3rem, 5vw, 6rem);    /* color: green; */
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  .main > p , .logoText3 > p{
+    font-size: 15px;
+    text-align: center;
+  }
+
+}
 

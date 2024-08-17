@@ -33,7 +33,7 @@
     transition: color 0.3s ease-in-out;
 }
 
-.logo , .contact , .logo{
+.logo , .contact {
     border: 0.1px solid #ffffe332;
     padding: 10px 20px;
     border-radius: 100px;

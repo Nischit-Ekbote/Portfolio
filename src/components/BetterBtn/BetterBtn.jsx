@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-export default function BetterBtn({ icon, text, href = '/contact' }) {
+export default function BetterBtn({ icon, text, href = '/contact' , padding=10 , width}) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [onBtn, setOnBtn] = useState(false);
   const linkRef = useRef(null);
@@ -53,6 +53,7 @@ export default function BetterBtn({ icon, text, href = '/contact' }) {
         zIndex: '1000',
         overflow: 'hidden',
         border: '1px solid #ffffe332',
+        padding:padding
 
       }}
     >
@@ -61,12 +62,12 @@ export default function BetterBtn({ icon, text, href = '/contact' }) {
         style={{
           position: 'absolute',
           zIndex: '-1',
-          backgroundColor: 'blue',
+          backgroundColor:'#7161ef',
           height: '250px',
           width: '250px',
           bottom: onBtn ? '-85px' : '-250px',
           transition: 'bottom 0.5s ease-out',
-          borderRadius: '100%'
+          borderRadius: '100%',
         }}
       />
     </Link>

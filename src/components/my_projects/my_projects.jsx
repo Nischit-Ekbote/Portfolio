@@ -4,7 +4,14 @@ import Page from './singleProject/SingleProject';
 
 const projects = [{
     title: 'Quil-Quest',
-    desc: 'dfgdfg',
+    desc: [
+        'User Registration and Authentication',
+        'Content Creation',
+        'Content Viewing',
+        'Simple Structure',
+        'User Profiles',
+        'Easy Navigation'
+    ],
     tools: 'Next.js MongoDb',
     img: '/project_thumbnails/Quil_quest.jpg',
     year: '2024',
@@ -12,7 +19,14 @@ const projects = [{
 },
 {
     title: 'Quil-Quest',
-    desc: 'dfgdfg',
+    desc: [
+        'User Registration and Authentication',
+        'Content Creation',
+        'Content Viewing',
+        'Simple Structure',
+        'User Profiles',
+        'Easy Navigation'
+    ],
     tools: 'Next.js MongoDb',
     img: '/project_thumbnails/Quil_quest.jpg',
     year: '2024',
@@ -30,11 +44,12 @@ export default function my_projects() {
         <div className={style.container}>
             <div>
                 <h1 style={{
-                    fontSize:'70px',
+                    fontSize:'60px',
                     fontWeight:'400',
-                    paddingTop:'80px',
+                    paddingTop:'50px',
                     paddingBottom:'30px',
-                    borderBottom:'1px solid #ffffe332'
+                    borderBottom:'1px solid #ffffe332',
+                    // color:'ffb5fb'
                 }}>My Projects</h1>
                 {list}
 
