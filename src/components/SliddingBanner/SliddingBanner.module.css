@@ -1,0 +1,57 @@
+.inner {
+  position: relative;
+  width: 1300px;
+  overflow: hidden;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+/* .inner::before , .inner::after{
+    content:'';
+    height: 100%;
+    width: 20px;
+    background-color: #121212;
+    
+    position: absolute;
+    z-index: 1000;
+}
+.inner::before{
+    left: -3px;
+    box-shadow: 20px 0px 10px 10px #121212;
+}
+.inner::after{
+    right: 0px;
+    background-color: white;
+    box-shadow: 2000px 0px 10px 10px white;
+
+} */
+
+.wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  animation: swipe var(--speed) linear infinite backwards;
+}
+
+.image {
+  height: 5rem;
+  width: auto;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes swipe {
+  0% {
+    transform: translate(-100%);
+  }
+
+  100% {
+    transform: translate(0%);
+  }
+}

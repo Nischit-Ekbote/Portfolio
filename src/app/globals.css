@@ -1,3 +1,7 @@
+:root{
+  color:--pink--;
+}
+
 @font-face {
   font-family: 'myFirstFont';
   src: url('/Inter/Inter-VariableFont_opsz,wght.ttf');

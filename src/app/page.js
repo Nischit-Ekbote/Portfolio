@@ -8,10 +8,12 @@ import InfoIcon from '@mui/icons-material/Info';
 import { useState , useEffect } from 'react';
 import About_me from '@/components/about_me/about_me';
 import BetterBtn from '@/components/BetterBtn/BetterBtn';
+import MainSlider from '@/components/SliddingBanner/MainSlider';
 import NextNProgress from 'nextjs-progressbar';
 import Image from 'next/image';
 
- 
+
+
 export const dynamic = 'force-dynamic'
 
 export default function App() {
@@ -75,7 +77,8 @@ export default function App() {
           pointerEvents: 'none', 
           zIndex: 9999, 
       }}></Image>}
-    
+      <MainSlider/>
+      
     </>
     
   );
