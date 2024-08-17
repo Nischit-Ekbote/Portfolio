@@ -4,9 +4,11 @@ import Link from 'next/link';
 import style from './page.module.css'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import { FiberManualRecordSharp } from '@mui/icons-material';
+import InfoIcon from '@mui/icons-material/Info';
 import { useState , useEffect } from 'react';
 import About_me from '@/components/about_me/about_me';
 import BetterBtn from '@/components/BetterBtn/BetterBtn';
+import NextNProgress from 'nextjs-progressbar';
 import Image from 'next/image';
 
  
@@ -37,7 +39,13 @@ export default function App() {
       }}>
       <p>{backSlash}HeIIo</p>
       <div className={style.logoText1}>
-        <div><Link href='/about'>I &lsquo; m Nischit</Link></div>
+        <div>
+          <NextNProgress/>
+          <BetterBtn 
+            icon={<InfoIcon/>}
+            text={" I'm Nischit " }
+            padding={'0px 20px'}
+          /></div>
         <h1 className={style.pink}>DIGITAL</h1>
       </div>
       <div className={style.logoText2}>
