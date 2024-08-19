@@ -30,13 +30,13 @@ export default function NamasteWrapper({ children }) {
     return (
         <div className={styles.wrapper}>
             <div className={`${styles.namaste} ${showNamaste ? styles.visible : styles.hidden}`}>
-                <h1 style={{
+                <ul style={{
                      color: '#FFFFE3',
                      fontWeight: '300',
                      fontSize: '40px'
                 }}>
-                    {greetingText}
-                </h1>
+                    <li>{greetingText}</li>
+                </ul>
             </div>
             <div className={`${styles.content} ${showContent ? styles.visible : styles.hidden}`}>
                 {children}

@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: 'myFirstFont';
-  src: url('/Inter/Inter-VariableFont_opsz,wght.ttf');
+  src: url('/Inter/Inter-VariableFont_opsz_wght.woff');
+  
   font-weight: Regular;
   font-style: normal;
 }
@@ -21,6 +22,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: black;
 }
 
 body {
@@ -58,3 +60,11 @@ a {
   width:2px;
 }
 
+
+.pink{
+  color: #ffb5fb;
+}
+
+.blue{
+  color: #73D8F7;
+}

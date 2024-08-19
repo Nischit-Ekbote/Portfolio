@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Inter-Extra-Light';
+    src: url('/Inter/InterDisplay-ExtraLight.woff2');
+}
+.container{
+    width: 1440px;
+    height: 360px;
+    /* border: 1px solid white; */
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 10px;
+    overflow: hidden;
+}
+
+.container ul {
+    padding:10px 0px 0px 0px ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container li {
+    list-style-type: none;
+}
+
+.container a:hover {
+    color: #73D8F7;
+}
+
+.logo{
+    width: 80px;
+}
+
+.logo > p{
+    font-family: Inter-Extra-Light;
+    font-size: 120px;
+    transform: rotate(90deg);
+    width: fit-content;
+    position: relative;
+    left: -130px;
+    top: 120px;
+    font-weight: 100;
+
+}
+
+.text{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px 0px;
+    width: calc(100% - 80px);
+}
+
+.quote p {
+    width: 180px;
+    font-weight: 200;
+    font-size: 27px;
+}
+
+.nav p {
+    color: orange;
+    font-size: 20px;
+}
+.tag__along p {
+    color: #adff2f;
+    font-size: 20px;
+}
+.connect__project__btn{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.connect__project__btn h4{
+    font-size: 25px;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.connect__project__btn h4 img{
+    border: 1px solid #ffffe332;
+    padding: 7px;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+}
+
+.connect__project__btn p{
+    font-size: 13px;
+    font-weight: 100;
+    color: rgba(245, 245, 220,0.7);
+}

@@ -44,27 +44,27 @@ export default function App() {
         <div>
           <NextNProgress/>
           <BetterBtn 
-            icon={<InfoIcon/>}
+            iconLeft={<InfoIcon/>}
             text={" I'm Nischit " }
             padding={'0px 20px'}
           /></div>
-        <h1 className={style.pink}>DIGITAL</h1>
+        <h1 className='pink'>DIGITAL</h1>
       </div>
       <div className={style.logoText2}>
         <h1 >DESIGNER</h1>
         <div>
           {/* <Link href='/contact'><FiberManualRecordSharp/> Let's Connect</Link> */}
           <BetterBtn 
-            icon={<FiberManualRecordSharp/>} 
+            iconLeft={<FiberManualRecordSharp/>} 
             text={"Let's Connect" }
           />
         </div>
       </div>
       <div className={style.logoText3}>
         <p>{backSlash}Front-End</p>
-        <span>&</span><h1 className={style.blue}>DEVELOPER.</h1>
+        <span>&</span><h1 className='blue'>DEVELOPER.</h1>
       </div>
-      <p>From <span className={style.pink}>pixel-perfect</span> designs to <span className={style.blue}>seamless</span> interfaces.</p>
+      <p>From <span className='pink'>pixel-perfect</span> designs to <span className='blue'>seamless</span> interfaces.</p>
       
     </main>
 

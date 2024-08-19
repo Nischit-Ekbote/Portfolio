@@ -68,7 +68,10 @@ export default function NavBar() {
     };
     
     return (
-        <>
+        <div style={{
+            display:'flex',
+            justifyContent:'center'
+        }}>
             <nav className={style.container}>
                 <LogoLink/>
                 <div className={style.items}>            
@@ -100,6 +103,6 @@ export default function NavBar() {
                     </div>
                 </div>
             )}
-        </>
+        </div>
     );
 }
