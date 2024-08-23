@@ -57,6 +57,7 @@ export default function App() {
           <BetterBtn 
             iconLeft={<FiberManualRecordSharp/>} 
             text={"Let's Connect" }
+            padding={'0px 20px'}
           />
         </div>
       </div>

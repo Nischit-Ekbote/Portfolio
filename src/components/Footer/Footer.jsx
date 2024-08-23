@@ -55,7 +55,8 @@ export default function Page() {
     ));
 
     return (
-        <div style={{
+        <>
+            <div style={{
             display: 'flex',
             justifyContent: 'center'
         }}>
@@ -98,11 +99,16 @@ export default function Page() {
                             <h4><span style={{
                                 color : isHover.project && '#73D8F7'
                             }}>Projects </span> <Image src={isHover.project ? 'Arrow/arrow-top-right-large.svg' : 'Arrow/arrow-right-large.svg'} alt='right-arrow' height={20} width={20} /></h4>
-                            <p>Come Say Hi!!</p>
+                            <p>View My Work!!</p>
                         </Link>
                     </div>
                 </div>
             </div>
         </div>
+        <div style={{
+           height:30,
+           paddingLeft:70
+        }}><p>STOIC ©2024 - Privacy Policy</p></div>
+        </>
     );
 }

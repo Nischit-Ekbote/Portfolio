@@ -86,7 +86,10 @@ export default function NavBar() {
                 {windowWidth !== undefined && windowWidth < 1000 &&
                     <div className={style.sidebarIcon} onClick={toggleSidebar} style={{
                         transform: isSideBarOpen ? 'rotate(-90deg)' : "",
-                        transition: '0.3s'
+                        transition: '0.3s',
+                        position:'absolute',
+                        right:'20px',
+                        zIndex:'10000'
                     }}>
                         <MenuIcon/>
                     </div>
@@ -94,6 +97,7 @@ export default function NavBar() {
             </nav>
             {isSideBarOpen && windowWidth < 1000 && (
                 <div className={style.sidebar}>
+
                     <div className={style.sidebaritems} style={sidebarItemsStyle}>            
                         {list}
                         <Link href='/contact'>

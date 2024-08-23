@@ -50,7 +50,7 @@ export default function BetterBtn({ iconLeft, iconRight, text, href = '/contact'
         backgroundColor: 'black',
         color: 'white',
         borderRadius: '50px',
-        zIndex: '1000',
+        zIndex: '998',
         overflow: 'hidden',
         border: '1px solid #ffffe332',
         padding:padding,
