@@ -1,9 +1,9 @@
-import My_projects from "@/components/my_projects/My_projects";
+import MyProjects from "@/components/myProjects/MyProjects";
 
 export default function Page() {
     return (
         <div>
-            <My_projects />
+            <MyProjects />
         </div>
     );
 }

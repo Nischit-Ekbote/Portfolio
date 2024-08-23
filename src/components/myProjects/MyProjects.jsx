@@ -39,7 +39,7 @@ const projects = [{
 }
 ];
 
-export default function My_projects() {
+export default function MyProjects() {
 
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [cursor , setCursor] = useState(false);
