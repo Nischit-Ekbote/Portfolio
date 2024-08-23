@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 
 const projects = [{
     title: 'Quil-Quest',
+    webLogo:'/project_thumbnails/Quil_Quest_Logo.svg',
     desc: [
         'User Registration and Authentication',
         'Content Creation',
@@ -18,10 +19,11 @@ const projects = [{
     img: '/project_thumbnails/Quil_quest.jpg',
     year: '2024',
     link: 'https://quil-quest.vercel.app',
-    logo:'/project_thumbnails/Quil-Quest-logo.svg'
+
 },
 {
     title: 'Quil-Quest',
+    webLogo:'/project_thumbnails/Quil_Quest_Logo.svg',
     desc: [
         'User Registration and Authentication',
         'Content Creation',
@@ -34,7 +36,6 @@ const projects = [{
     img: '/project_thumbnails/Quil_quest.jpg',
     year: '2024',
     link: 'https://quil-quest.vercel.app',
-    logo:'/project_thumbnails/Quil-Quest-logo.svg'
 }
 ];
 

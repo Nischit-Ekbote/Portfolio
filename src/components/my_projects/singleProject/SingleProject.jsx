@@ -3,8 +3,6 @@ import style from './singleProject.module.css'
 import Image from 'next/image';
 
 export default function Page({project , i}) {
-    // console.log(project.link)
-    // Function to determine if a URL is external
     const isExternalLink = (url) => {
         return url.startsWith('http://') || url.startsWith('https://');
     };
@@ -29,7 +27,7 @@ export default function Page({project , i}) {
                             <p className={style.metaData}>{project.tools}</p>
                         </div>
                         <p className={style.metaData}>{project.year}</p>
-                        <Image src='project_thumbnails/Quil_Quest_logo.svg' width={50} height={50} style={{
+                        <Image src={project.webLogo} width={50} height={50} style={{
                             position:'absolute',
                             zIndex:'100',
                             right:'70px',
@@ -63,7 +61,7 @@ export default function Page({project , i}) {
                             <p className={style.metaData}>{project.tools}</p>
                         </div>
                         <p className={style.metaData}>{project.year}</p>
-                        <Image src='project_thumbnails/Quil_Quest_logo.svg' width={50} height={50} style={{
+                        <Image src={project.webLogo} width={50} height={50} style={{
                             position:'absolute',
                             zIndex:'100',
                             right:'70px',
