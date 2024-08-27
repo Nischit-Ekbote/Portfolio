@@ -8,6 +8,7 @@ import gsap from "gsap";
 import Footer from "@/components/Footer/Footer";
 import { useGSAP } from "@gsap/react";
 
+// Custom Hook for Mouse Position
 function useMousePosition() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -23,6 +24,7 @@ function useMousePosition() {
   return mousePosition;
 }
 
+// Memoized Cursor Component with Display Name
 const MemoizedCursor = React.memo(({ mousePosition, rotate }) => (
   <img
     src="/cursors/curve_text.svg"
@@ -40,7 +42,9 @@ const MemoizedCursor = React.memo(({ mousePosition, rotate }) => (
     }}
   />
 ));
+MemoizedCursor.displayName = "MemoizedCursor";
 
+// Main Page Component with Display Name
 export default function Page() {
   const [formData, setFormData] = useState({
     name: '',
@@ -75,16 +79,15 @@ export default function Page() {
 
   useGSAP(() => {
     gsap.to(rotate.current, {
-    rotation: 360,
-    duration: 3,
-    ease: "none",
-    repeat: -1,
+      rotation: 360,
+      duration: 3,
+      ease: "none",
+      repeat: -1,
     });
-}, [cursor]);
+  }, [cursor]);
 
   useGSAP(() => {
     const timeline = gsap.timeline();
-    
     timeline.from('.input__block', {
       duration: 0.8,
       opacity: 0,
@@ -93,10 +96,6 @@ export default function Page() {
       ease: "power3.out"
     });
   }, []);
-
-  useGSAP(()=>{
-    
-  });
 
   const inputFields = [
     { name: 'name', label: 'Name', type: 'text', placeholder: 'Nika' },
@@ -148,46 +147,48 @@ export default function Page() {
 
   return (
     <>
-    <div className={style.container} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave}>
-      <h1>Let&apos;s Connect</h1>
-      <p><span className='pink'>Collaborate</span> and <span className='blue'>create</span></p>
-      <form className={style.form} onSubmit={handleSubmit}>
-        {inputFields.map(renderInputField)}
+      <div className={style.container} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave}>
+        <h1>Let&apos;s Connect</h1>
+        <p><span className='pink'>Collaborate</span> and <span className='blue'>create</span></p>
+        <form className={style.form} onSubmit={handleSubmit}>
+          {inputFields.map(renderInputField)}
 
-        <div className={`${style.input__btn} input__btn`}>
-          <button
-            type='submit'
-            onMouseEnter={handleSubmitHover}
-            onMouseLeave={handleSubmitLeave}
-            style={{
-              backgroundColor: submitHover ? 'beige' : 'black',
-              color: submitHover ? 'black' : '',
-              transition: 'all 0.3s ease'
-            }}
-          >
-            Connect!
-          </button>
-          <button
-            type='submit'
-            onMouseEnter={handleSubmitHover}
-            onMouseLeave={handleSubmitLeave}
-            style={{
-              backgroundColor: submitHover ? 'black' : 'beige',
-              transition: 'all 0.3s ease'
-            }}
-          >
-            <Image
-              src={submitHover ? "/Arrow/arrow-top-right-normal-green.svg" : "/Arrow/arrow-right-normal-black.svg"}
-              alt="right-arrow"
-              width={24}
-              height={24}
-            />
-          </button>
-        </div>
-      </form>
-      {cursor && <MemoizedCursor mousePosition={mousePosition} rotate={rotate} />}
-    </div>
-    {/* <Footer/> */}
+          <div className={`${style.input__btn} input__btn`}>
+            <button
+              type='submit'
+              onMouseEnter={handleSubmitHover}
+              onMouseLeave={handleSubmitLeave}
+              style={{
+                backgroundColor: submitHover ? 'beige' : 'black',
+                color: submitHover ? 'black' : '',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              Connect!
+            </button>
+            <button
+              type='submit'
+              onMouseEnter={handleSubmitHover}
+              onMouseLeave={handleSubmitLeave}
+              style={{
+                backgroundColor: submitHover ? 'black' : 'beige',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <Image
+                src={submitHover ? "/Arrow/arrow-top-right-normal-green.svg" : "/Arrow/arrow-right-normal-black.svg"}
+                alt="right-arrow"
+                width={24}
+                height={24}
+              />
+            </button>
+          </div>
+        </form>
+        {cursor && <MemoizedCursor mousePosition={mousePosition} rotate={rotate} />}
+      </div>
+      {/* <Footer /> */}
     </>
   );
 }
+
+Page.displayName = "Page";

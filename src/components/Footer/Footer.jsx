@@ -75,7 +75,7 @@ export default function Page() {
             opacity: 1,
             ease: "power3.out"
         });
-    }, [pathname]);
+    }, []);
 
     const navigateItems = navigate.map((item, i) => (
         <Link href={item.url} key={i}><li>{item.name}</li></Link>
