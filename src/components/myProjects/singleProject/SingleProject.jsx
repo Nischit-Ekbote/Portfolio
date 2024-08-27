@@ -26,7 +26,7 @@ export default function Page({project , i}) {
                             <p className={style.metaData}>{project.tools}</p>
                         </div>
                         <p className={style.metaData}>{project.year}</p>
-                        <Image src={project.webLogo} width={50} height={50} style={{
+                        <Image src={project.webLogo} alt={project.title} width={50} height={50} style={{
                             position:'absolute',
                             zIndex:'100',
                             right:'70px',

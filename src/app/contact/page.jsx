@@ -149,7 +149,7 @@ export default function Page() {
   return (
     <>
     <div className={style.container} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave}>
-      <h1>Let's Connect</h1>
+      <h1>Let&apos;s Connect</h1>
       <p><span className='pink'>Collaborate</span> and <span className='blue'>create</span></p>
       <form className={style.form} onSubmit={handleSubmit}>
         {inputFields.map(renderInputField)}
