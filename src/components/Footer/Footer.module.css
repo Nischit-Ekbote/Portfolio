@@ -4,12 +4,15 @@
 }
 .container{
     width: 1440px;
-    height: 360px;
-    /* border: 1px solid white; */
+    /* height: 360px; */
+    border: 1px solid #ffffe332;
+    border-radius: 30px;
     display: flex;
+    padding: 30px 0px;
     /* justify-content: space-between; */
     margin: 10px;
     overflow: hidden;
+
 }
 
 .container ul {

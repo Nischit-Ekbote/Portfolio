@@ -79,7 +79,7 @@ export default function NavBar() {
                 </div>
 
                 <div className={style.contact}>
-                    <Link href='/contact'>
+                    <Link href='/contact' prefetch={false}>
                         <MarkunreadIcon/>   
                     Contact Me</Link>
                 </div>

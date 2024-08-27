@@ -1,10 +1,17 @@
 'use client'
 import Link from 'next/link';
 import Image from 'next/image';
-import style from './Footer.module.css'
+import style from './Footer.module.css';
 import BetterBtn from '../BetterBtn/BetterBtn';
 import VerticalLine from './VerticalLine';
-import { useState } from 'react'
+import { useState } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+import { usePathname } from 'next/navigation'
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 const navigate = [{
     name: 'Home',
@@ -43,6 +50,32 @@ const connect = [{
 export default function Page() {
 
     const [isHover, setIsHover] = useState({ connect: false, project: false });
+    const pathname = usePathname()
+
+    useGSAP(() => {
+        const timeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.footerText',
+                start: 'top 80%', // triggers when the top of the text reaches 80% of the viewport height
+                toggleActions: 'play none none none', // play animation on scroll, no reverse, reset, or repeat
+            }
+        });
+        
+        timeline.from('.footerText', {
+            duration: 0.8,
+            opacity: 0,
+            x: 50,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+
+        timeline.to('.footerText', {
+            duration: 0.8,
+            x: 0,
+            opacity: 1,
+            ease: "power3.out"
+        });
+    }, [pathname]);
 
     const navigateItems = navigate.map((item, i) => (
         <Link href={item.url} key={i}><li>{item.name}</li></Link>
@@ -62,24 +95,24 @@ export default function Page() {
         }}>
             <div className={style.container}>
                 <div className={style.logo}><p>STOIC</p></div>
-                <div className={style.text}>
-                    <div className={style.quote}><p><span className='pink'>Elegance</span> paired with <span className='blue'>efficiency</span></p></div>
+                <div className={`${style.text} text`}>
+                    <div className={`${style.quote} footerText`}><p><span className='pink'>Elegance</span> paired with <span className='blue'>efficiency</span></p></div>
                     <VerticalLine />
-                    <div className={style.nav}>
+                    <div className={`${style.nav} footerText`}>
                         <p>NAVIGATE</p>
                         <ul>
                             {navigateItems}
                         </ul>
                     </div>
                     <VerticalLine />
-                    <div className={style.tag__along}>
+                    <div className={`${style.tag__along} footerText`}>
                         <p>TAG ALONG</p>
                         <ul>
                             {connectItems}
                         </ul>
                     </div>
                     <VerticalLine />
-                    <div className={style.connect__project__btn}>
+                    <div className={`${style.connect__project__btn} footerText`}>
                         <Link href='/contact'
                             onMouseOver={() => setIsHover(prev => ({ ...prev, connect: true }))}
                             onMouseOut={() => setIsHover(prev => ({ ...prev, connect: false }))}

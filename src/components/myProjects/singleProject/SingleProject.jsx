@@ -18,7 +18,6 @@ export default function Page({project , i}) {
         }}>
             {i%2==0 ? 
             <>
-            
                 <a href={project.link}><Image src={project.img} alt={project.title}  width={650} height={300}></Image></a>
                 <div className={style.textBlock}>
                     <div className={style.titleBlock}>

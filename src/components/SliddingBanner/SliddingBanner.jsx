@@ -14,7 +14,7 @@ const SliddingBanner = ({ images, speed = 7000 }) => {
                   alt={`Sliding image ${index + 1}`}
                   width={60}  
                   height={60} 
-                  objectFit="cover"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             ))}
