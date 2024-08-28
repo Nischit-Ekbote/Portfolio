@@ -13,8 +13,11 @@ import NextNProgress from 'nextjs-progressbar';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import dynamic from 'next/dynamic';
 
-export const dynamic = 'force-dynamic'
+const Scene = dynamic(() => import('@/components/3dModel/scene'), {
+  ssr:false
+})
 
 export default function App() {
   const container = useRef();
@@ -69,15 +72,28 @@ export default function App() {
       ease: 'power3.out',
       delay:1
     });
+    gsap.from('.threeDdiv',{
+      opacity: 0,
+      delay :1.5,
+      duration: 1,
+      ease: 'power3.out',
+    });
   }, { scope: container });
 
   return (
     <>
+      {/* <div className='threedDiv' style={{
+        position:'absolute',
+        width:'100%',
+        height:'100%',
+      }}>
+       <Scene pos={mousePosition}/>
+      </div> */}
       <main className={style.main} onMouseOver={() => setCursor(true)} onMouseOut={() => setCursor(false)} style={{
         cursor: cursor ? 'none' : 'pointer'
       }} ref={container}>
         <p>{backSlash}HeIIo</p>
-        <div className={`${style.logoText1} logoText1`}>
+        <div className={`${style.logoText1} logoText1`}> 
           <div>
             <NextNProgress/>
             <BetterBtn 

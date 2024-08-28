@@ -7,6 +7,11 @@ import Image from 'next/image';
 import gsap from "gsap";
 import Footer from "@/components/Footer/Footer";
 import { useGSAP } from "@gsap/react";
+import dynamic from 'next/dynamic';
+
+const Scene = dynamic(() => import('@/components/3dModel/scene'), {
+  ssr:false
+})
 
 // Custom Hook for Mouse Position
 function useMousePosition() {
@@ -26,7 +31,7 @@ function useMousePosition() {
 
 // Memoized Cursor Component with Display Name
 const MemoizedCursor = React.memo(({ mousePosition, rotate }) => (
-  <img
+  <img 
     src="/cursors/curve_text.svg"
     alt=""
     height={70}
@@ -34,9 +39,9 @@ const MemoizedCursor = React.memo(({ mousePosition, rotate }) => (
     ref={rotate}
     style={{
       position: 'fixed',
+      // transform: 'translate(-50%, -50%)',
       left: `${mousePosition.x + 3}px`,
       top: `${mousePosition.y + 5}px`,
-      transform: 'translate(-50%, -50%)',
       pointerEvents: 'none',
       zIndex: 9999,
     }}
@@ -148,7 +153,14 @@ export default function Page() {
   return (
     <>
       <div className={style.container} onMouseEnter={handleCursorEnter} onMouseLeave={handleCursorLeave}>
-        <h1>Let&apos;s Connect</h1>
+        <h1>Let&apos;s Connect <div className='threedDiv' style={{
+        left:375,
+        position:'absolute',
+        width:'200px',
+        height:'200px',
+      }}>
+       <Scene pos={mousePosition}/>
+      </div></h1>
         <p><span className='pink'>Collaborate</span> and <span className='blue'>create</span></p>
         <form className={style.form} onSubmit={handleSubmit}>
           {inputFields.map(renderInputField)}

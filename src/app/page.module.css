@@ -8,6 +8,7 @@
   color: #FFFFE3;
   border-bottom: 1px solid  #ffffe332;
   overflow:hidden;
+  position: relative;
   /* cursor: none; */
 }
 
@@ -33,6 +34,8 @@
   align-items: center;
   gap: 10px;
   cursor: none;
+  /* position: absolute;
+  z-index: 1000; */
 }
 
 .logoText2 > div > a > svg , .logoText1 > div > a > svg{
