@@ -26,7 +26,7 @@ export default function AboutMe() {
                 }}>Nischit Ekbote!!</span>, a passionate <span className='blue'><ReactTyped strings={["digital designer." , " front-end developer."]} typeSpeed={100} backSpeed={20} loop /></span><br /> With a keen eye for creating pixel-perfect designs and seamless interfaces.</p>
                 <p style={{
                     fontSize: '1.3vw',
-                    padding: '0px 20px 30px 0px ',
+                    padding: '0px 50% 30px 0px ',
                     borderBottom: '1px solid #ffffe332',
                     fontWeight:100,
                     textAlign:'justify',

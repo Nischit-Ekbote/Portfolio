@@ -36,8 +36,8 @@ const MemoizedCursor = React.memo(({ mousePosition, rotate }) => (
       alt="Curved text cursor"
       width={70}
       height={70}
-      className={styles.rotating}
-      ref={rotateRef}
+      className={style.rotating}
+      ref={rotate}
       style={{
         position: 'fixed',
         left: `${mousePosition.x + 3}px`,
