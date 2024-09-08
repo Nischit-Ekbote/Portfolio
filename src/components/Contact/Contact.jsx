@@ -8,6 +8,7 @@ import gsap from "gsap";
 import Footer from "@/components/Footer/Footer";
 import { useGSAP } from "@gsap/react";
 import dynamic from 'next/dynamic';
+import { Image } from 'next/image';
 
 const Scene = dynamic(() => import('@/components/3dModel/scene'), {
   ssr:false
@@ -31,21 +32,21 @@ function useMousePosition() {
 
 // Memoized Cursor Component with Display Name
 const MemoizedCursor = React.memo(({ mousePosition, rotate }) => (
-  <img 
-    src="/cursors/curve_text.svg"
-    alt=""
-    height={70}
-    className={style.rotating}
-    ref={rotate}
-    style={{
-      position: 'fixed',
-      // transform: 'translate(-50%, -50%)',
-      left: `${mousePosition.x + 3}px`,
-      top: `${mousePosition.y + 5}px`,
-      pointerEvents: 'none',
-      zIndex: 9999,
-    }}
-  />
+  <Image
+      src="/cursors/curve_text.svg"
+      alt="Curved text cursor"
+      width={70}
+      height={70}
+      className={styles.rotating}
+      ref={rotateRef}
+      style={{
+        position: 'fixed',
+        left: `${mousePosition.x + 3}px`,
+        top: `${mousePosition.y + 5}px`,
+        pointerEvents: 'none',
+        zIndex: 9999,
+      }}
+    />
 ));
 MemoizedCursor.displayName = "MemoizedCursor";
 
