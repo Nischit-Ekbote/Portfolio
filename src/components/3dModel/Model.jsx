@@ -11,7 +11,7 @@ function Model({ pos }) {
   const [materialProps, setMaterialProps] = useState({
     color: '#a0ff00',
     roughness: 0,
-    transmission: 0,
+    transmission: 1,
     ior: 1,
     chromaticAberration: 0,
     backside: true

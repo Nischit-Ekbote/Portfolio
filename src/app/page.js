@@ -6,18 +6,16 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import { FiberManualRecordSharp } from '@mui/icons-material';
 import InfoIcon from '@mui/icons-material/Info';
 import { useState , useEffect, useRef } from 'react';
-import About_me from '@/components/about_me/about_me';
+import About_me from '@/components/about_me/About_me';
 import BetterBtn from '@/components/BetterBtn/BetterBtn';
 import MainSlider from '@/components/SliddingBanner/MainSlider';
 import NextNProgress from 'nextjs-progressbar';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import dynamic from 'next/dynamic';
+import NavBar from '@/components/NavBar/NavBar';
+import Footer from "@/components/Footer/Footer";
 
-const Scene = dynamic(() => import('@/components/3dModel/scene'), {
-  ssr:false
-})
 
 export default function App() {
   const container = useRef();
@@ -82,13 +80,7 @@ export default function App() {
 
   return (
     <>
-      {/* <div className='threedDiv' style={{
-        position:'absolute',
-        width:'100%',
-        height:'100%',
-      }}>
-       <Scene pos={mousePosition}/>
-      </div> */}
+      <NavBar/>
       <main className={style.main} onMouseOver={() => setCursor(true)} onMouseOut={() => setCursor(false)} style={{
         cursor: cursor ? 'none' : 'pointer'
       }} ref={container}>
@@ -100,6 +92,7 @@ export default function App() {
               iconLeft={<InfoIcon/>}
               text={" I'm Nischit " }
               padding={'0px 20px'}
+              href='/about'
             />
           </div>
           <h1 className='pink'>DIGITAL</h1>
@@ -126,10 +119,11 @@ export default function App() {
         position: 'fixed',
         left: mousePosition.x,
         top: mousePosition.y,
-        pointerEvents: 'none', 
+        pointerEvents: 'none',  
         zIndex: 9999, 
       }}/>}
       <MainSlider/>
+      <Footer/>
     </>
   );
 }

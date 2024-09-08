@@ -56,7 +56,7 @@ export default function Page() {
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: '.footerText',
-                start: 'top 80%', // triggers when the top of the text reaches 80% of the viewport height
+                start: 'top 100%', // triggers when the top of the text reaches 80% of the viewport height
                 toggleActions: 'play none none none', // play animation on scroll, no reverse, reset, or repeat
             }
         });
