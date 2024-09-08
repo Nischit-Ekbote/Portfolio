@@ -31,7 +31,7 @@ export default function AboutMe() {
                     fontWeight:100,
                     textAlign:'justify',
                     width:1400,
-                }}>My approach combines <span className='pink'>creativity</span> with <span className='blue'>technical</span> expertise, allowing me to bridge the gap between <span className='pink'>aesthetics</span> and <span className='blue'>functionality</span>. I'm constantly exploring new technologies and design trends to stay at the forefront of <span className='green'>web development</span>.</p>
+                }}>My approach combines <span className='pink'>creativity</span> with <span className='blue'>technical</span> expertise, allowing me to bridge the gap between <span className='pink'>aesthetics</span> and <span className='blue'>functionality</span>. I&apos;m constantly exploring new technologies and design trends to stay at the forefront of <span className='green'>web development</span>.</p>
                 <MainSlider/>
              </div>
         </section>
