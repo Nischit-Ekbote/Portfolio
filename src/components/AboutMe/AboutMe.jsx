@@ -21,7 +21,7 @@ export default function AboutMe() {
                     padding: '30px 20px 20px 0px ',
                     width:1400,
                     // width:450,
-                }}>Hello! I'm <span className='orange' style={{
+                }}>Hello! {`I'm`} <span className='orange' style={{
                     fontSize:30
                 }}>Nischit Ekbote!!</span>, a passionate <span className='blue'><ReactTyped strings={["digital designer." , " front-end developer."]} typeSpeed={100} backSpeed={20} loop /></span><br /> With a keen eye for creating pixel-perfect designs and seamless interfaces.</p>
                 <p style={{
