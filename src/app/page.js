@@ -1,12 +1,9 @@
 'use client'
 
-import Link from 'next/link';
 import style from './page.module.css'
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import { FiberManualRecordSharp } from '@mui/icons-material';
 import InfoIcon from '@mui/icons-material/Info';
 import { useState , useEffect, useRef } from 'react';
-import About_me from '@/components/about_me/About_me';
 import BetterBtn from '@/components/BetterBtn/BetterBtn';
 import MainSlider from '@/components/SliddingBanner/MainSlider';
 import NextNProgress from 'nextjs-progressbar';
