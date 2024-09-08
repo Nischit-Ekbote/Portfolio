@@ -8,7 +8,6 @@ import gsap from "gsap";
 import Footer from "@/components/Footer/Footer";
 import { useGSAP } from "@gsap/react";
 import dynamic from 'next/dynamic';
-import { Image } from 'next/image';
 
 const Scene = dynamic(() => import('@/components/3dModel/scene'), {
   ssr:false
