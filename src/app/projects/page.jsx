@@ -1,3 +1,5 @@
+'use client'
+
 import MyProjects from "@/components/myProjects/MyProjects";
 import NavBar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer/Footer";
