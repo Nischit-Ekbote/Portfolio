@@ -19,6 +19,14 @@ export default function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [cursor , setCursor] = useState(false);
   const backSlash = '//';
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
 
   useEffect(() => {
     const updateMousePosition = (ev) => {
@@ -90,6 +98,7 @@ export default function App() {
               text={" I'm Nischit " }
               padding={'0px 20px'}
               href='/about'
+              screenWidth={width}
             />
           </div>
           <h1 className='pink'>DIGITAL</h1>
@@ -101,6 +110,7 @@ export default function App() {
               iconLeft={<FiberManualRecordSharp/>} 
               text={"Let's Connect" }
               padding={'0px 20px'}
+              screenWidth={width}
             />
           </div>
         </div>

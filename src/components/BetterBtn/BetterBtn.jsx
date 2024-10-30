@@ -3,7 +3,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { gsap } from 'gsap';
 
-export default function BetterBtn({ iconLeft, iconRight, text, href = '/contact', padding, width }) {
+export default function BetterBtn({ iconLeft, iconRight, text, href = '/contact', padding, width, screenWidth }) {
   const [onBtn, setOnBtn] = useState(false);
   const linkRef = useRef(null);
   const spanRef = useRef(null);
@@ -76,7 +76,7 @@ export default function BetterBtn({ iconLeft, iconRight, text, href = '/contact'
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '60px',
+        height: screenWidth < 700 ? '40px' : '60px',
         position: 'relative',
         backgroundColor: 'black',
         color: 'white',
@@ -86,7 +86,8 @@ export default function BetterBtn({ iconLeft, iconRight, text, href = '/contact'
         border: '1px solid #ffffe332',
         padding: padding,
         gap: '10px',
-        width: width
+        // width:screenWidth < 700 ? 10 : width,
+        fontSize: screenWidth < 700 ? '10px' : ''
       }}
     >
       {iconLeft} {text} {iconRight}

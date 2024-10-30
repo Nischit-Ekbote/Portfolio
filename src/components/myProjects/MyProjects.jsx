@@ -25,20 +25,20 @@ const projects = [
     link: 'https://quil-quest.vercel.app',
   },
   {
-    title: 'Quil-Quest',
-    webLogo: '/project_thumbnails/Quil_Quest_Logo.svg',
+    title: 'Gilded-Bit',
+    webLogo: '/project_thumbnails/Gilded_Bit_Logo.svg',
     desc: [
       'User Registration and Authentication',
-      'Content Creation',
-      'Content Viewing',
+      'Buying and Selling of Digital Gold',
+      'Purcase history',
       'Simple Structure',
       'User Profiles',
       'Easy Navigation'
     ],
-    tools: 'Next.js MongoDb',
-    img: '/project_thumbnails/Quil_quest.jpg',
+    tools: 'React, Express, Postgres',
+    img: '/project_thumbnails/Gilded_Bit.png',
     year: '2024',
-    link: 'https://quil-quest.vercel.app',
+    link: 'https://gilded-bit.pages.dev/',
   },
 ];
 

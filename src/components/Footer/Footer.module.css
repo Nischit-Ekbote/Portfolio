@@ -26,9 +26,6 @@
     list-style-type: none;
 }
 
-.container a:hover {
-    color: #73D8F7;
-}
 
 .logo{
     width: 80px;
@@ -63,9 +60,18 @@
     color: orange;
     font-size: 20px;
 }
+
+.nav li:hover{
+    color:orange
+}
+
 .tag__along p {
     color: #adff2f;
     font-size: 20px;
+}
+
+.tag__along Link :hover{
+    color:#adff2f
 }
 .connect__project__btn{
     display: flex;

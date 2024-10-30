@@ -78,15 +78,18 @@ export default function Page() {
     }, []);
 
     const navigateItems = navigate.map((item, i) => (
-        <Link href={item.url} key={i}><li>{item.name}</li></Link>
+        <Link href={item.url} key={i}><li className={style.naigativeItems}>{item.name}</li></Link>
     ));
 
-    const connectItems = connect.map((item, i) => (
-        <Link href={item.url} key={i}><li><Image src={item.imgUrl} alt={item.name} height={20} width={20} style={{
-            marginRight: '10px'
-        }}></Image>{item.name}</li></Link>
+     const connectItems = connect.map((item, i) => (
+        <Link href={item.url} key={i} target="_blank" rel="noopener noreferrer">
+            <Image src={item.imgUrl} alt={item.name} height={20} width={20} style={{
+                marginRight: '10px'
+            }} />
+            {item.name}
+        </Link>
     ));
-
+    
     return (
         <>
             <div style={{

@@ -10,7 +10,7 @@ export default function NamasteWrapper({ children }) {
     const [showContent, setShowContent] = useState(false);
     
     useEffect(() => {
-        const greetings = ["hello", " नमस्ते", 'ನಮಸ್ಕಾರ'];
+        const greetings = [" ","hello", " नमस्ते", 'ನಮಸ್ಕಾರ'];
         let currentIndex = 0;
         
         const intervalId = setInterval(() => {

@@ -74,9 +74,9 @@ export default function NavBar() {
         }}>
             <nav className={style.container}>
                 <LogoLink/>
-                <div className={style.items}>            
+                {isSideBarOpen==false && <div className={style.items}>            
                     {list}
-                </div>
+                </div>}
 
                 <div className={style.contact}>
                     <Link href='/contact' prefetch={false}>

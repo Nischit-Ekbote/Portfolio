@@ -20,7 +20,7 @@ export default function Page({ project, i }) {
     >
       {i % 2 === 0 ? (
         <>
-          <a href={project.link}>
+          <a href={project.link} target="_blank" rel="noopener noreferrer">
             <Image src={project.img} alt={project.title} width={650} height={300} />
           </a>
           <div className={style.textBlock}>
@@ -56,7 +56,7 @@ export default function Page({ project, i }) {
                   <li key={i}>{d}</li>
                 ))}
               </ul>
-              <Link href={project.link}>Visit Website</Link>
+              <Link href={project.link} target="_blank" rel="noopener noreferrer">Visit Website</Link>
             </div>
           </div>
         </>
@@ -95,10 +95,10 @@ export default function Page({ project, i }) {
                   <li key={i}>{d}</li>
                 ))}
               </ul>
-              <Link href={project.link}>Visit Website</Link>
+              <Link href={project.link} target="_blank" rel="noopener noreferrer">Visit Website</Link>
             </div>
           </div>
-          <a href={project.link}>
+          <a href={project.link} target="_blank" rel="noopener noreferrer">
             <Image src={project.img} alt={project.title} width={650} height={300} />
           </a>
         </>
