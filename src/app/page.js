@@ -63,7 +63,7 @@ export default function App() {
         <div className={`${styles.logoText2} logoText2`}>
           <h1>DES<span className='i' style={{ display: 'inline-block', fontSize: '70px', fontWeight: 900, margin: '0px 6px 0px 6px' }}>i</span>GNER</h1>
           <div>
-            <BetterBtn iconLeft={<FiberManualRecordSharp />} text={"Let's Connect"} padding={'0px 20px'} screenWidth={width} />
+            <BetterBtn iconLeft={<FiberManualRecordSharp />} text={"Let's Connect"} padding={'10px 20px'} screenWidth={width} />
           </div>
         </div>
         <div className={`${styles.logoText3} logoText3`}>

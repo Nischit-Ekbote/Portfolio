@@ -159,7 +159,7 @@ export default function Contact() {
         width:'200px',
         height:'200px',
       }}>
-       <Scene pos={mousePosition}/>
+       {/* <Scene pos={mousePosition}/> */}
       </div></h1>
         <p><span className='pink'>Collaborate</span> and <span className='blue'>create</span></p>
         <form className={style.form} onSubmit={handleSubmit}>
